@@ -15,14 +15,14 @@ namespace HomeTownZoo.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "About Hometown Zoo";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact Hometown Zoo";
 
             return View();
         }
