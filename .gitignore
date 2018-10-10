@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/HomeTownZoo/Properties/PublishProfiles/HomeTownZooClassProject - Web Deploy.pubxml
