@@ -3,10 +3,19 @@ namespace HomeTownZoo.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Animals",
+                c => new
+                    {
+                        AnimalID = c.Int(nullable: false, identity: true),
+                        AnimalName = c.String(),
+                    })
+                .PrimaryKey(t => t.AnimalID);
+            
             CreateTable(
                 "dbo.AspNetRoles",
                 c => new
@@ -94,6 +103,7 @@ namespace HomeTownZoo.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Animals");
         }
     }
 }
