@@ -13,6 +13,8 @@ namespace HomeTownZoo.Controllers
             return View();
         }
 
+        // allows certain groups access actions with identity
+        // [Authorize(Roles = "Admin" )]
         public ActionResult About()
         {
             ViewBag.Message = "About Hometown Zoo";
