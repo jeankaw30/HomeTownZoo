@@ -31,7 +31,7 @@ namespace HomeTownZoo.Models
         }
 
         // add db context here
-        public DbSet<Animal> Animals { get; set; }
+        public virtual DbSet<Animal> Animals { get; set; }
 
     }
 }
