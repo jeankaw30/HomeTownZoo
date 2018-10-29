@@ -25,5 +25,21 @@ namespace HomeTownZoo.Models
             //        .ToList();
         }
 
+        // add a animaal
+        public static void AddAnimal(Animal a, ApplicationDbContext db)
+        {
+            if(a is null)
+            {
+                throw new ArgumentNullException($"Parameter {nameof(a)} cannot be null");
+            }
+
+            // TO DO: Ensure duplicate names are disallowed
+
+
+            db.Animals.Add(a);
+            db.SaveChanges(); // saves changes
+
+        }
+
     }
 }
